@@ -44,19 +44,20 @@
 
 \geometry{%
   left=25mm,
-  right=15mm,
+  right=25mm,
   top=15mm,
-  bottom=15mm,
+  bottom=23mm,
   headsep=15mm,
   headheight=15mm,
   footskip=7mm,
   includehead=true,
-  includefoot=true
+  includefoot=true,
 }
 
 % Control line spacing
 \onehalfspacing
-\newcommand{\Padding}{\vspace{0.5cm}}
+\newcommand{\Padding}{\vspace*{0.5cm}}
+\newcommand{\Separator}{\hspace*{0.2cm}•\hspace*{0.2cm}}
 
 % Custom colors
 \definecolor{darkgray}{gray}{0.4}
@@ -78,27 +79,30 @@
 }
 
 % Configure header and footer
-\newcommand{\HeaderFont}{\footnotesize\color{mediumgray}}
+\newcommand{\HeaderFont}{\small\color{mediumgray}}
 \pagestyle{fancy}
 \fancyhf{}
 \rhead{%
-  \includegraphics[height=1.5cm]{usp.png}
+  \includegraphics[height=1.75cm]{usp.png}
 }
 \lhead{%
-  \includegraphics[height=1.5cm]{iag.png}
+  \includegraphics[height=1.75cm]{iag.png}
 }
 \cfoot{%
   \HeaderFont{}
   \Centering
+  \vspace*{2mm}
   \onehalfspacing
-  Rua do Matão, 1226 - São Paulo, SP, Brasil, 05508-090
+  Tel: \Telefone{}
+  \Separator{}
+  E-mail: \href{mailto:\Email}{\Email}
+  \Separator{}
+  Website: \href{https://www.compgeolab.org}{www.compgeolab.org}
   \newline
-  Tel: \Telefone{};
-  E-mail: \href{mailto:\Email}{\Email};
-  Website: \href{https://www.iag.usp.br}{www.iag.usp.br}
+  Rua do Matão, 1226 - São Paulo, SP, Brasil, 05508-090
 }
 \renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\footrulewidth}{2pt}
 \preto{\footrule}{\color{lightgray}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -120,14 +124,15 @@
 Cara Pessoa,
 \Padding
 
-\lipsum[1-2]
+\lipsum[1-6]
 \Padding
 
 \begin{flushleft}
   Atenciosamente,
 
   \Padding
-  \includegraphics[height=0.9cm]{assinatura.png}
+
+  {\color{mediumgray}(assinado digitalmente)}
 
   \Nome{}
   \\[0.25cm]
