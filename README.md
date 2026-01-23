@@ -1,3 +1,8 @@
+> [!IMPORTANT]
+> **This repository has moved to Codeberg** and will no longer be updated here: https://codeberg.org/leouieda/templates
+
+---
+
 # Templates for stuff
 
 Some templates for things I have to use/write often.
